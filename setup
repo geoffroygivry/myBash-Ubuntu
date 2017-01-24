@@ -4,5 +4,5 @@
 echo "alias listservice='sudo service --status-all'" >> ~/.bashrc
 echo "alias c='clear ; source ~/mybash/welcome'" >> ~/.bashrc
 echo "alias s='source ~/mybash/nav'" >> ~/.bashrc
-echo "alias showchmod="stat --format '%a'"" >> ~/.bashrc
+echo "alias showchmod=\"stat --format '%a'\"" >> ~/.bashrc
 echo "alias src='source ~/.bashrc'" >> ~/.bashrc
