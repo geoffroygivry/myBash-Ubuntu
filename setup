@@ -2,6 +2,7 @@
 
 echo "" >> ~/.bashrc
 echo "#Geoff aliases" >> ~/.bashrc
+echo "export PS1=\"\[$(tput bold)\]\[\033[38;5;167m\]\u\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] @ \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;99m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] - [\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;215m\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]]:\[$(tput sgr0)\]\""
 echo "alias listservice='sudo service --status-all'" >> ~/.bashrc
 echo "alias c='clear ; source ~/mybash/welcome'" >> ~/.bashrc
 echo "alias s='source ~/mybash/nav'" >> ~/.bashrc
