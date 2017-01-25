@@ -1,12 +1,9 @@
 # myBash
 
+### Setup:
+```
+mkdir ~/mybash/; git clone https://github.com/geoffroygivry/myBash.git ~/mybash/; source ~/mybash/setup
+```
 
-```
-mkdir ~/mybash/; git clone https://github.com/geoffroygivry/myBash.git ~/mybash/
-```
 
-## Setup:
 
-```
-source ~/mybash/setup
-```
