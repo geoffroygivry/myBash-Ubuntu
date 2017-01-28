@@ -4,6 +4,9 @@ GREEN=`tput setaf 2`
 reset=`tput sgr0`
 message=("$@")
 
+git config --global user.name "Geoffroy Givry"
+git config --global user.email "geoff.givry@gmail.com"
+
 echo "# ReadMe" >> README.md
 git init
 git add -A
