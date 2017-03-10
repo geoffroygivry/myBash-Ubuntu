@@ -11,8 +11,10 @@ echo "alias gitinit='source ~/mybash/gitFirstInit'" >> ~/.bashrc
 echo "alias showchmod=\"stat --format '%a'\"" >> ~/.bashrc
 echo "alias src='source ~/.bashrc'" >> ~/.bashrc
 echo "alias pwdf='readlink -f'" >> ~/.bashrc
+echo "alias sve='source ./bin/activate'" >> ~/.bashrc
 echo "alias mb='s ~/mybash'" >> ~/.bashrc
 echo "alias u='cd ../'" >> ~/.bashrc
 echo "alias uu='cd ../..'" >> ~/.bashrc
-echo "alias uuuu='cd ../../..'" >> ~/.bashrc
+echo "alias uuu='cd ../../..'" >> ~/.bashrc
+echo "alias uuuu='cd ../../../..'" >> ~/.bashrc
 source ~/.bashrc
