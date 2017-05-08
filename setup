@@ -19,5 +19,6 @@ echo "alias u='cd ../'" >> ~/.bashrc
 echo "alias uu='cd ../..'" >> ~/.bashrc
 echo "alias uuu='cd ../../..'" >> ~/.bashrc
 echo "alias uuuu='cd ../../../..'" >> ~/.bashrc
+echo "alias aa='sudo nano ~/.bashrc'" >> ~/.bashrc
 
 source ~/.bashrc
