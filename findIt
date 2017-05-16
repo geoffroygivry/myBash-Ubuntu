@@ -1,7 +1,7 @@
-#!bin/csh
+#!bin/bash
 
 
-set sear = $argv[1]
+sear=$1
 
 clear
 
@@ -11,6 +11,6 @@ echo Find $sear
 
 echo "======"
 
-grep -rnw .  --color -e $sear
+grep -rnw .  --color --exclude=*.{pyc,~} -e $sear
 
 echo "======"
