@@ -10,6 +10,7 @@ echo "alias s='source ~/mybash/nav'" >> ~/.bashrc
 echo "alias gogit='source ~/mybash/goGit'" >> ~/.bashrc
 echo "alias gitinit='source ~/mybash/gitFirstInit'" >> ~/.bashrc
 echo "alias findit='source ~/mybash/findIt'" >> ~/.bashrc
+echo "alias gitreset='source ~/mybash/gitreset'" >> ~/.bashrc
 echo "alias showchmod=\"stat --format '%a'\"" >> ~/.bashrc
 echo "alias src='source ~/.bashrc'" >> ~/.bashrc
 echo "alias pwdf='readlink -f'" >> ~/.bashrc
