@@ -10,6 +10,7 @@ echo "alias s='source ~/mybash/nav'" >> ~/.bashrc
 echo "alias gogit='source ~/mybash/goGit'" >> ~/.bashrc
 echo "alias gitinit='source ~/mybash/gitFirstInit'" >> ~/.bashrc
 echo "alias findit='source ~/mybash/findIt'" >> ~/.bashrc
+echo "alias lss='lss -r'" >> ~/.bashrc
 echo "alias gitreset='source ~/mybash/gitreset'" >> ~/.bashrc
 echo "alias showchmod=\"stat --format '%a'\"" >> ~/.bashrc
 echo "alias src='source ~/.bashrc'" >> ~/.bashrc
@@ -25,3 +26,14 @@ echo "alias uuuu='cd ../../../..'" >> ~/.bashrc
 
 
 source ~/.bashrc
+
+echo "installing pyseq...."
+sudo pip install pyseq
+
+echo "update system..."
+sudo apt-get update
+echo "upgrade system..."
+sudo apt-get upgrade
+echo "installing ffi lib..."
+sudo apt-get libffi-dev
+echo "Hurray! your system is ready to rumble! :)"
