@@ -23,6 +23,7 @@ echo "alias u='cd ../'" >> ~/.bashrc
 echo "alias uu='cd ../..'" >> ~/.bashrc
 echo "alias uuu='cd ../../..'" >> ~/.bashrc
 echo "alias uuuu='cd ../../../..'" >> ~/.bashrc
+echo "alias cls='clear'" >> ~/.bashrc
 
 
 source ~/.bashrc
@@ -36,4 +37,5 @@ echo "upgrade system..."
 sudo apt-get upgrade
 echo "installing ffi lib..."
 sudo apt-get install libffi-dev
+sudo apt-get install nano
 echo "Hurray! your system is ready to rumble! :)"
