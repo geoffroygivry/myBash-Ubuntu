@@ -2,7 +2,7 @@
 
 ### Setup:
 ```
-mkdir ~/mybash/; git clone https://github.com/geoffroygivry/myBash.git ~/mybash/; source ~/mybash/setup
+mkdir ~/mybash/; git clone git@github.com:geoffroygivry/myBash-Ubuntu.git ~/mybash/; source ~/mybash/setup
 ```
 
 
