@@ -32,9 +32,9 @@ echo "installing pyseq...."
 sudo pip install pyseq
 
 echo "update system..."
-sudo apt-get update
+sudo apt-get update -y
 echo "upgrade system..."
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 echo "installing ffi lib..."
 sudo apt-get install libffi-dev
 sudo apt-get install nano
