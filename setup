@@ -10,6 +10,8 @@ echo "alias s='source ~/mybash/nav'" >> ~/.bashrc
 echo "alias gogit='source ~/mybash/goGit'" >> ~/.bashrc
 echo "alias gitinit='source ~/mybash/gitFirstInit'" >> ~/.bashrc
 echo "alias findit='source ~/mybash/findIt'" >> ~/.bashrc
+echo "alias lss='lss -r'" >> ~/.bashrc
+echo "alias gitreset='source ~/mybash/gitreset'" >> ~/.bashrc
 echo "alias showchmod=\"stat --format '%a'\"" >> ~/.bashrc
 echo "alias src='source ~/.bashrc'" >> ~/.bashrc
 echo "alias pwdf='readlink -f'" >> ~/.bashrc
@@ -21,6 +23,19 @@ echo "alias u='cd ../'" >> ~/.bashrc
 echo "alias uu='cd ../..'" >> ~/.bashrc
 echo "alias uuu='cd ../../..'" >> ~/.bashrc
 echo "alias uuuu='cd ../../../..'" >> ~/.bashrc
+echo "alias cls='clear'" >> ~/.bashrc
 
 
 source ~/.bashrc
+
+echo "installing pyseq...."
+sudo pip install pyseq
+
+echo "update system..."
+sudo apt-get update -y
+echo "upgrade system..."
+sudo apt-get upgrade -y
+echo "installing ffi lib..."
+sudo apt-get install libffi-dev
+sudo apt-get install nano
+echo "Hurray! your system is ready to rumble! :)"

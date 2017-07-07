@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
+cd ~/workspace
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -28,7 +28,7 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -43,7 +43,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-force_color_prompt=yes
+#force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -84,18 +84,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 # some more ls aliases
-alias ll='ls -l'
+alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias listservice='sudo service --status-all'
-alias c='clear ; source ~/mybash/welcome'
-alias s='source ~/mybash/nav'
-alias showchmod="stat --format '%a'"
-alias src='source ~/.bashrc'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -117,4 +113,35 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source ~/mybash/welcome
+#Geoff aliases
+export LS_COLORS="di=1;34:*.py=35:*.pyc=90"
+export PS1="\[[1m\]\[\033[38;5;167m\]\u\[(B[m\]\[(B[m\]\[\033[38;5;15m\] @ \[[1m\]\[(B[m\]\[\033[38;5;99m\]\h\[(B[m\]\[(B[m\]\[\033[38;5;15m\] - [\[[1m\]\[(B[m\]\[\033[38;5;215m\]\W\[(B[m\]\[(B[m\]\[\033[38;5;15m\]]:\[(B[m\]"
+alias listservice='sudo service --status-all'
+alias c='clear ; source ~/mybash/welcome'
+alias s='source ~/mybash/nav'
+alias gogit='source ~/mybash/goGit'
+alias gitinit='source ~/mybash/gitFirstInit'
+alias findit='source ~/mybash/findIt'
+alias showchmod="stat --format '%a'"
+alias src='source ~/.bashrc'
+alias pwdf='readlink -f'
+alias sve='source ./bin/activate'
+alias mb='s ~/mybash'
+alias aa='sudo nano ~/.bashrc'
+alias aadd='source ~/mybash/addAlias'
+alias gitreset='source ~/mybash/gitreset'
+alias venv='source ~/workspace/CyclopsVFX-Polyphemus/bin/activate'
+alias u='cd ../'
+alias uu='cd ../..'
+alias uuu='cd ../../..'
+alias uuuu='cd ../../../..'
+alias pycdell='sudo find . -name \*.pyc -delete'
+alias pc='pyclean .'
+alias kcw='pkill -f "celery worker"'
+alias celerygo='celery -A cyclops.celery worker --loglevel=info --without-gossip --without-mingle --without-heartbeat'
+alias pol='s /home/cabox/workspace/CyclopsVFX-Polyphemus'
+alias cls='clear'
+alias goprod='venv; celerygo & python cyclops.py'
+alias cycgo='pol; venv; python cyclops.py'
+alias atlas='mongo "mongodb://test-shard-00-00-dzxob.mongodb.net:27017,test-shard-00-01-dzxob.mongodb.net:27017,test-shard-00-02-dzxob.mongodb.net:27017/test?replicaSet=test-shard-0" --authenticationDatabase admin --ssl --username Geoff --password'
+
