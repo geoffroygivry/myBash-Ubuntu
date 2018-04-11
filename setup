@@ -24,6 +24,7 @@ echo "alias uu='cd ../..'" >> ~/.bashrc
 echo "alias uuu='cd ../../..'" >> ~/.bashrc
 echo "alias uuuu='cd ../../../..'" >> ~/.bashrc
 echo "alias cls='clear'" >> ~/.bashrc
+echo "alias _='source ~/mybash/conv_white_space_to_underscore'" >> ~/.bashrc
 
 
 source ~/.bashrc
