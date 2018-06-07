@@ -25,6 +25,7 @@ echo "alias uuu='cd ../../..'" >> ~/.bashrc
 echo "alias uuuu='cd ../../../..'" >> ~/.bashrc
 echo "alias cls='clear'" >> ~/.bashrc
 echo "alias _='source ~/mybash/conv_white_space_to_underscore'" >> ~/.bashrc
+echo "alias pcat='pygmentize -g'" >> ~/.bashrc
 
 
 source ~/.bashrc
@@ -39,4 +40,5 @@ sudo apt-get upgrade -y
 echo "installing ffi lib..."
 sudo apt-get install libffi-dev
 sudo apt-get install nano
+sudo apt-get install python-pygments
 echo "Hurray! your system is ready to rumble! :)"
