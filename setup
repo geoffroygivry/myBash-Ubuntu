@@ -41,4 +41,5 @@ echo "installing ffi lib..."
 sudo apt-get install libffi-dev
 sudo apt-get install nano
 sudo apt-get install python-pygments
+sudo apt-get install figlet
 echo "Hurray! your system is ready to rumble! :)"
